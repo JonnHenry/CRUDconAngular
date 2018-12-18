@@ -1,0 +1,27 @@
+<br/>
+<div class="container col-lg-10">
+
+    <form #personaForm="ngForm" (ngSubmit)="onSubmit(personaForm)"> 
+
+        <div class="form-group" >
+          <label >Nombre</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Nombre" #nombre="ngModel" [(ngModel)]="persona.nombre"/>
+        </div>
+    
+        <div class="form-group">
+          <label >Apellidos</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Apellidos" #apellidos="ngModel" [(ngModel)]="persona.apellidos"/>
+        </div>
+    
+        <div class="form-group">
+          <label >Telefono</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" #telefono="ngModel" [(ngModel)]="persona.telefono" placeholder="Telefono"/>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Agregar Persona</button>
+    
+      </form>
+
+</div>
+
+

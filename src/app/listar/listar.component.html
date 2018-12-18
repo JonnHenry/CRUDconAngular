@@ -1,0 +1,36 @@
+<br/>
+<div class="container col-lg-10">
+  <h2 alig-content="center">Los datos obtenidos son</h2>
+  <br/>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Fecha de creación</th>
+            <th>Fecha de modificación</th>
+          </tr>
+        </thead>
+      
+        <tbody *ngFor="let item of personas">
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.telefono}}</td>
+            <td *ngIf="item.createdAt; else notCreated">{{item.createdAt}}</td>
+            <ng-template #notCreated>
+                <td>Dato no disponible</td>
+            </ng-template>
+            <td *ngIf="item.createdAt; else notCreated">{{item.updatedAt}}</td>
+            <ng-template #notCreated>
+                <td>Dato no disponible</td>
+            </ng-template>
+          </tr>
+        </tbody>
+      
+      </table>
+</div>
+

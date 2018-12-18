@@ -1,0 +1,16 @@
+<br />
+<div class="container col-lg-10">
+  <form #deleteForm="ngForm" (ngSubmit)="onSubmit(deleteForm)">
+
+    <div class="form-group">
+      <label>Id de la persona a eliminar</label>
+      <input type="text" class="form-control" name="delete" placeholder="Id Persona" #nombre="ngModel" [(ngModel)]="delete.id" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Borrar Persona</button>
+
+  </form>
+
+
+
+</div>

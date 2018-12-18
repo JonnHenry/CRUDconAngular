@@ -1,0 +1,32 @@
+<br />
+<div class="container col-lg-10">
+  <div class="container col-lg-10">
+    <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+
+      <div class="form-group">
+        <label>Id de la persona a eliminar</label>
+        <input type="text" class="form-control" placeholder="Id Persona" [ngModelOptions]="{standalone: true}" #ident="ngModel" [(ngModel)]="id"/>
+      </div>
+
+      <div class="form-group" >
+          <label >Nombre</label>
+          <input type="text" class="form-control"  [ngModelOptions]="{standalone: true}" placeholder="Nombre" #nombre="ngModel" [(ngModel)]="update.nombre"/>
+        </div>
+    
+        <div class="form-group">
+          <label >Apellidos</label>
+          <input type="text" class="form-control"  [ngModelOptions]="{standalone: true}" placeholder="Apellidos" #apellidos="ngModel" [(ngModel)]="update.apellidos"/>
+        </div>
+    
+        <div class="form-group">
+          <label >Telefono</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" #telefono="ngModel" [(ngModel)]="update.telefono" placeholder="Telefono"/>
+        </div>
+
+      <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+
+    </form>
+
+  </div>
+
+</div>
