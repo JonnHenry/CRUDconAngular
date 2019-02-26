@@ -13,7 +13,7 @@ export class BorrarComponent implements OnInit {
       public _peticionesService: PeticionesService
   ) {
     this.delete={
-      "id" : ""
+      'id' : ''
     }
    }
 
@@ -25,7 +25,7 @@ export class BorrarComponent implements OnInit {
       response=>{
         form.reset();
         alert(response.respuesta);
-        
+
       },
       error=>{
         console.log(<any>error);

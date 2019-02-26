@@ -8,17 +8,17 @@ import { PeticionesService } from '../services/peticiones.service';
   providers: [ PeticionesService ]
 })
 export class ActualizarComponent implements OnInit {
-  
+
     public update: any;
     public id :number;
 
   constructor(
     private _peticionesService: PeticionesService
-  ) { 
+  ) {
       this.update={
-        "nombre":"",
-        "apellidos":"",
-        "telefono":""
+        "nombre": '',
+        "apellidos": '',
+        "telefono": ''
       }
       this.id=0;
   }
@@ -31,7 +31,7 @@ export class ActualizarComponent implements OnInit {
       response=>{
         form.reset();
         alert('Se ingreso los datos de: '+response.nombre+' '+response.apellidos);
-        
+
       },
       error=>{
         console.log(<any>error);
